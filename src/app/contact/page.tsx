@@ -1,23 +1,23 @@
-// "use client"
-
 import React from "react";
 import ContactCard from "../components/ContactCard";
 import styles from "./contact.module.css";
 import ContactForm from "../components/ContactForm";
-import {  Mulish } from 'next/font/google'
+import { Mulish } from 'next/font/google';
+
 const mulish = Mulish({
   weight: ["1000"],
   subsets: ["cyrillic-ext"],
   display: 'swap',
-})
+});
+
 const Contact = () => {
   return (
     <>
       <div className={styles.container}>
-        <h1>Conatct Us</h1>
+        <h1>Contact Us</h1>
         <ContactCard />
         <section className={styles.contact_section}>
-          <h2  className={mulish.className} >
+          <h2 className={mulish.className}>
             we'd love to hear <span> from you</span>
           </h2>
           <ContactForm />
@@ -28,9 +28,9 @@ const Contact = () => {
         width="600"
         height="450"
         className={styles.mapping}
-        allowfullscreen=""
+        // allowFullScreen="" // Fix: Use 'allowFullScreen' instead of 'allowfullscreen'
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
+        referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
     </>
   );
