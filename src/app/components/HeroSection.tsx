@@ -30,15 +30,27 @@ const HeroSection: React.FC<HeroSectionProps> = ({ title, imageUrl }) => {
               movies, and find your new favorite today.
             </p>
             <Link href="/movie">
-              <button  style={{
-              borderRadius: 20,
-              backgroundColor: "#000",
-              color: "#fff",
-              textAlign: "center",
-              fontWeight: 400,
-              width:150,
-              height:35
-            }}
+              <button  
+              style={{
+                borderRadius: 20,
+                border:"1px solid #000",
+                backgroundColor: "#000",
+                color: "#fff",
+                textAlign: "center",
+                fontWeight: 400,
+                width: 150,
+                height: 35,
+                transition: "background-color 0.3s ease-in-out", // Add transition property
+                cursor: "pointer", // Add pointer cursor for better user experience
+              }}
+              onMouseEnter={(e:any) => {
+                e.target.style.backgroundColor = "#fff"; 
+                e.target.style.color="#000"// Change background color on hover
+              }}
+              onMouseLeave={(e:any) => {
+                e.target.style.backgroundColor = "#000";
+                e.target.style.color="#fff" // Revert back to original color on mouse leave
+              }}
              className={mulish.className}>Explore Movies</button>
             </Link>
           </div>

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import styles from "@/app/styles/navbar.module.css";
 import Image from "next/image";
@@ -12,6 +13,7 @@ const Header = () => {
             src="/logo.png"
             // priority={true}
             // quality={75}
+            style={{backgroundColor:'#ffffff'}}
             alt="my logo image"
             width={150}
             height={40}
