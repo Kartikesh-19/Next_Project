@@ -73,7 +73,7 @@ const ContactForm = () => {
       const newErrors: Record<string, string> = {};
       Array.isArray(validationErrors.inner) &&
         validationErrors.inner.forEach((error: string) => {
-          newErrors[error.path:any] = error.message;
+          newErrors[error.path] = error.message;
         });
       setErrors(newErrors);
     }
