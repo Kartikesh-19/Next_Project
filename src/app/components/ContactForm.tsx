@@ -18,7 +18,7 @@ const ContactForm = () => {
     phone: "",
     message: "",
   });
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<any>({});
   const [status, setStatus] = useState<string>("");
   const handleStates = (key: string, value: string) => {
     setUser((user) => ({
@@ -28,13 +28,13 @@ const ContactForm = () => {
     validationSchema
       .validateAt(key, { [key]: value })
       .then(() => {
-        setErrors((prevErrors) => ({
+        setErrors((prevErrors:any) => ({
           ...prevErrors,
           [key]: undefined, // Clear the error for the current field
         }));
       })
       .catch((error) => {
-        setErrors((prevErrors) => ({
+        setErrors((prevErrors:any) => ({
           ...prevErrors,
           [key]: error.message, // Update the error for the current field
         }));
@@ -70,9 +70,9 @@ const ContactForm = () => {
       }
     } catch (validationErrors:any) {
       // Validation failed, update errors state
-      const newErrors: Record<string, string> = {};
+      const newErrors:any = {};
       Array.isArray(validationErrors.inner) &&
-        validationErrors.inner.forEach((error: string) => {
+        validationErrors.inner.forEach((error: any) => {
           newErrors[error.path] = error.message;
         });
       setErrors(newErrors);
