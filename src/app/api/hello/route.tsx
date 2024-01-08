@@ -1,5 +1,7 @@
-import { NextApiRequest } from 'next';
-export async function GET(request:NextApiRequest) {
-  console.log("first",request)
-    return new Response('Hello, Next.js!')
-  }
+// src/app/api/hello.ts
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  console.log("first", req);
+  res.status(200).json({ message: 'Hello, Next.js!' });
+}
