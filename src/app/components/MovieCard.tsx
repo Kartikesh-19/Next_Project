@@ -34,11 +34,11 @@ const MovieCard = (val: any) => {
               transition: "background-color 0.3s ease-in-out", // Add transition property
               cursor: "pointer", // Add pointer cursor for better user experience
             }}
-            onMouseEnter={(e: FormEvent<HTMLFormElement>) => {
+            onMouseEnter={(e:any) => {
               e.target.style.backgroundColor = "#fff"; 
               e.target.style.color="#000"// Change background color on hover
             }}
-            onMouseLeave={(e: FormEvent<HTMLFormElement>) => {
+            onMouseLeave={(e:any) => {
               e.target.style.backgroundColor = "#000";
               e.target.style.color="#fff" // Revert back to original color on mouse leave
             }}

@@ -40,7 +40,7 @@ const ContactForm = () => {
         }));
       });
   };
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault();
 
     try {
@@ -68,12 +68,12 @@ const ContactForm = () => {
       } else {
         setStatus("error");
       }
-    } catch (validationErrors) {
+    } catch (validationErrors:any) {
       // Validation failed, update errors state
       const newErrors: Record<string, string> = {};
       Array.isArray(validationErrors.inner) &&
         validationErrors.inner.forEach((error: string) => {
-          newErrors[error.path] = error.message;
+          newErrors[error.path:any] = error.message;
         });
       setErrors(newErrors);
     }
