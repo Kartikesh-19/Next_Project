@@ -1,6 +1,6 @@
 import mongoose from "mongoose"
 
-const MONGODB_URL = process.env.MONGODB_URL;
+const MONGODB_URL: string | undefined = process.env.MONGODB_URL;
 
 if (!MONGODB_URL) {
     throw new Error(
@@ -9,7 +9,7 @@ if (!MONGODB_URL) {
 }
 
 
-let cached = global.mongoose;
+let cached: any = global.mongoose;
 
 if (!cached) {
     cached = global.mongoose = { con: null, promise: null }
