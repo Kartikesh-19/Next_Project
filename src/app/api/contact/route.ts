@@ -1,5 +1,5 @@
 
-import Contact from "@/modules/contact";
+import Contact from "../../../modules/contact";
 import dbConnect from "@/utils/dbConn";
 import { NextResponse } from "next/server";
 
