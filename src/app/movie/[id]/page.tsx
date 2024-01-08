@@ -2,7 +2,7 @@ import React from 'react'
 import styles from "@/app/styles/common.module.css"
 import Image from 'next/image';
 
-const page = async({params}) => {
+const page = async({params}:any) => {
     const {id}=params;
     const url = `https://netflix54.p.rapidapi.com/title/details/?ids=${id}&lang=en`
     const options = {
