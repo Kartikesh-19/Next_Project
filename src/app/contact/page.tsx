@@ -1,7 +1,15 @@
+// "use client"
+
 import React from "react";
 import ContactCard from "../components/ContactCard";
 import styles from "./contact.module.css";
 import ContactForm from "../components/ContactForm";
+import {  Mulish } from 'next/font/google'
+const mulish = Mulish({
+  weight: ["1000"],
+  subsets: ["cyrillic-ext"],
+  display: 'swap',
+})
 const Contact = () => {
   return (
     <>
@@ -9,8 +17,8 @@ const Contact = () => {
         <h1>Conatct Us</h1>
         <ContactCard />
         <section className={styles.contact_section}>
-          <h2>
-            we'd love to hear <span> from you</span>{" "}
+          <h2  className={mulish.className} >
+            we'd love to hear <span> from you</span>
           </h2>
           <ContactForm />
         </section>

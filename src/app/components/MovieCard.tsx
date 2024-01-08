@@ -5,10 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const MovieCard = (val: any) => {
-  console.log(val, "test here");
   const { type, id, synopsis, title } = val?.jawSummary;
-  // const { url } = val?.jawSummary?.backgroundImage;
-  // console.log("==============>url", url);
   return (
     <>
       <div className={styles.card}>
@@ -27,6 +24,7 @@ const MovieCard = (val: any) => {
             <button
             style={{
               borderRadius: 20,
+              border:"1px solid #000",
               backgroundColor: "#000",
               color: "#fff",
               textAlign: "center",
@@ -36,11 +34,11 @@ const MovieCard = (val: any) => {
               transition: "background-color 0.3s ease-in-out", // Add transition property
               cursor: "pointer", // Add pointer cursor for better user experience
             }}
-            onMouseEnter={(e) => {
+            onMouseEnter={(e: FormEvent<HTMLFormElement>) => {
               e.target.style.backgroundColor = "#fff"; 
               e.target.style.color="#000"// Change background color on hover
             }}
-            onMouseLeave={(e) => {
+            onMouseLeave={(e: FormEvent<HTMLFormElement>) => {
               e.target.style.backgroundColor = "#000";
               e.target.style.color="#fff" // Revert back to original color on mouse leave
             }}

@@ -1,3 +1,5 @@
+
+'use client'
 import React from "react";
 import heroStyles from "../styles/herosection.module.css";
 import styles from "@/app/styles/common.module.css";
@@ -53,7 +55,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ title, imageUrl }) => {
       <div className={heroStyles["custom-shape-divider-bottom-1704359249"]}>
         <svg
           data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
+          xmlns="http://www.w3.org/2000/svg"  
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
         >

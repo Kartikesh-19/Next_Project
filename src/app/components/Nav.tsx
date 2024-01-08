@@ -1,7 +1,11 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import styles from "@/app/styles/navbar.module.css"
 import Link from 'next/link'
+import {CgCloseR, CgMenu} from "react-icons/cg";
 const Nav = () => {
+    const [openMenu, setOpenMenu] = useState(false);
+        console.log("value " + openMenu)
     return (
         <nav className={styles.navbar}>
             <div className={""}>
@@ -27,6 +31,18 @@ const Nav = () => {
                         </Link>
                     </li>
                 </ul>
+                <div className={styles['mobile-navbar-btn']}>
+                        <CgMenu
+                            name="menu-outline"
+                            className={styles['mobile-nav-icon']}
+                            onClick={() => setOpenMenu(true)}
+                        />
+                        <CgCloseR
+                            name="close-outline"
+                            className={`${styles['mobile-nav-icon']} ${styles['close-outline']}`}
+                            onClick={() => setOpenMenu(false)}
+                        />
+                    </div>
             </div>
 
         </nav>

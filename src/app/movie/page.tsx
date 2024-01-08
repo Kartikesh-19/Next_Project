@@ -20,7 +20,6 @@ const Movie = async () => {
     const res = await fetch(url, options);
     const data = await res.json();
     const main_data = data.titles;
-    console.log(main_data.jawSummary)
 
     return (
         <>

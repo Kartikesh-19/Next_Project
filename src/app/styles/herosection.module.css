@@ -59,6 +59,7 @@
     width: 100%;
     overflow: hidden;
     line-height: 0;
+  
 }
 
 .custom-shape-divider-bottom-1704359249 svg {
@@ -66,6 +67,7 @@
     display: block;
     width: calc(100% + 1.3px);
     height: 150px;
+    transform: rotate(180deg);
 }
 
 .custom-shape-divider-bottom-1704359249 .shape-fill {
