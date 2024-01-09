@@ -15,6 +15,7 @@
 
 .navbar_brand {
     text-align: left;
+    /* flex-direction: row; */
 }
 
 .navbarList {
@@ -40,9 +41,9 @@
     overflow: hidden;
 }
 
-/*.navbarList .navbarItem a:hover {*/
-/*    color: #e50914;*/
-/*}*/
+.navbarList .navbarItem a:hover {
+ color: #e50914;
+}
 
 .navbarItem a:before {
     content: "";

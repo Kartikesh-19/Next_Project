@@ -20,7 +20,7 @@ function getPageTitle(pathname: string): string {
     case "/":
       return "Home";
     case "/about":
-      return "About";
+      return " About";
     case "/contact":
       return "Contact";
     case "/movies":
@@ -49,11 +49,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={mulish.className}>
       <head>
-        <title>{pageTitle}</title>
+        <title>{"Netflix"+ "/" +pageTitle}</title>
       </head>
       <body>
         <Provider store={store}>
-          <Header />
+          <Header {...{pageTitle}}/>
           {children}
           <Footer />
         </Provider>
