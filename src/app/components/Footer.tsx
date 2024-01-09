@@ -1,6 +1,6 @@
 import React from 'react';
 import footerStyles from '@/app/styles/footer.module.css'
-import { FaFacebookF, FaTwitter,FaInstagram,FaLinkedinIn,FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaTwitter,FaInstagram,FaLinkedinIn,FaYoutube, FaSpotify } from "react-icons/fa";
 import Link from "next/link";
 
 
@@ -20,11 +20,11 @@ const Footer = () => {
                             <span className={footerStyles.logo_name}>Netflix App</span>
                         </div>
                         <div className={footerStyles[`media-icons`]}>
-                            <Link href="#"><i > <FaFacebookF/> </i></Link>
-                            <Link href="#"><i > <FaTwitter/> </i> </Link>
+                            <Link href="https://www.facebook.com/katwal1998?mibextid=ZbWKwL"><i > <FaFacebookF/> </i></Link>
+                            <Link href="https://open.spotify.com/artist/2VrJeFgTSkprlJtEsDQVzi?si=RrBnaCEMTJ2O-T72ANzLsw&nd=1&dlsi=bdd8e03acbe545d0"><i > <FaSpotify/> </i> </Link>
                             <Link href="https://www.instagram.com/kartikesh_sharma/" target="_blank"><i > <FaInstagram/>  </i></Link>
                             <Link href="#"><i > <FaLinkedinIn /> </i></Link>
-                            <Link href="#"><i > <FaYoutube />  </i></Link>
+                            <Link href="https://www.youtube.com/@pbrapsquad"><i > <FaYoutube />  </i></Link>
                         </div>
                     </div>
                     <div className={footerStyles['link-boxes']}>

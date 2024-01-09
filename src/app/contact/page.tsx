@@ -1,8 +1,10 @@
+"use client"
 import React from "react";
 import ContactCard from "../components/ContactCard";
 import styles from "./contact.module.css";
 import ContactForm from "../components/ContactForm";
 import { Mulish } from 'next/font/google';
+import { useSelector } from "react-redux";
 
 const mulish = Mulish({
   weight: ["1000"],
