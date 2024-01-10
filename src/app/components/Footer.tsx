@@ -23,7 +23,7 @@ const Footer = () => {
                             <Link href="https://www.facebook.com/katwal1998?mibextid=ZbWKwL"><i > <FaFacebookF/> </i></Link>
                             <Link href="https://open.spotify.com/artist/2VrJeFgTSkprlJtEsDQVzi?si=RrBnaCEMTJ2O-T72ANzLsw&nd=1&dlsi=bdd8e03acbe545d0"><i > <FaSpotify/> </i> </Link>
                             <Link href="https://www.instagram.com/kartikesh_sharma/" target="_blank"><i > <FaInstagram/>  </i></Link>
-                            <Link href="#"><i > <FaLinkedinIn /> </i></Link>
+                            <Link href="https://www.linkedin.com/in/kartikesh-sharma-b1aa46203/"><i > <FaLinkedinIn /> </i></Link>
                             <Link href="https://www.youtube.com/@pbrapsquad"><i > <FaYoutube />  </i></Link>
                         </div>
                     </div>

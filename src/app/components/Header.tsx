@@ -9,7 +9,7 @@ const Header = ({pageTitle}:any) => {
     <header className={styles.main_header}>
       <div className={styles.navbar_brand}>
         <Link href={"/"} >
-          <div style={{display:'flex', justifyContent:'space-between',fontSize:25}}>
+          <div style={{display:'flex', justifyContent:'space-between',fontSize:28, fontWeight:"bolder",gap:"5px"}}>
 
           <Image
             src="/logo.png"
