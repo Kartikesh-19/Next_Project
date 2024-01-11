@@ -1,17 +1,19 @@
-import Link from "next/link";
-import styles from "@/app/styles/common.module.css";
+import Link from 'next/link';
+import styles from "@/app/styles/common.module.css"; // Import your CSS module
 
-export default function NotFound() {
+const NotFoundPage: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.error_page}>
-        <h1>404</h1>
-        <h2>Not Found</h2>
-        <p>Could not find requested resource</p>
+        <h2 className={styles.error_heading}>404</h2>
+        <h3 className={styles.error_subheading}>Not Found</h3>
+        <p className={styles.error_message}>Sorry, The page you are requested is not found.</p>
         <Link href="/">
-          <button>Return Home</button>
+           Return Home
         </Link>
       </div>
     </div>
   );
-}
+};
+
+export default NotFoundPage;

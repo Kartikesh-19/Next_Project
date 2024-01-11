@@ -11,7 +11,7 @@ const Movie: React.FC = () => {
 
   const url:
     | string
-    | undefined = `https://netflix54.p.rapidapi.com/search/?query=stranger&offset=0&limit_titles=50&limit_suggestions=20&lang=en`;
+    | undefined = `https://netflix54.p.rapidapi.com/search/?query=stranger&offset=0&limit_titles=10&limit_suggestions=20&lang=en`;
   useEffect(() => {
     apiData();
   }, []);

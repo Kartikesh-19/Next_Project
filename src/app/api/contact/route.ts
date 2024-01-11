@@ -8,7 +8,6 @@ export async function POST(req: any, res: any) {
 
         const body = await req.json();
         const val = await dbConnect();
-        console.log('post', val)
 
         await Contact.create(body);
 

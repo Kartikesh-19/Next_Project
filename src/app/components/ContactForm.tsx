@@ -46,7 +46,6 @@ const ContactForm = () => {
     try {
       await validationSchema.validate(user, { abortEarly: false });
       // Validation passed, proceed with form submission
-      console.log("Form submitted:", user);
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -76,6 +75,7 @@ const ContactForm = () => {
           newErrors[error.path] = error.message;
         });
       setErrors(newErrors);
+      //===================
     }
   };
   return (

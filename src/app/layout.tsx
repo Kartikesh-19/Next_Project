@@ -23,7 +23,7 @@ function getPageTitle(pathname: string): string {
       return " About";
     case "/contact":
       return "Contact";
-    case "/movies":
+    case "/movie":
       return "Movies";
     // Add more cases for other pages as needed
     default:
@@ -44,6 +44,7 @@ export default function RootLayout({
   title: string; // Add a title prop
 }) {
   const currentPath = usePathname();
+  console.log('====================>',currentPath)
 
   const pageTitle = getPageTitle(currentPath);
   return (

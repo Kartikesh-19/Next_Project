@@ -10,12 +10,10 @@ const HandleSlice = createSlice({
     initialState,
     reducers: {
         setMovies: (state: any, action: any) => {
-            console.log('===========>setMovies', state)
             state.movies = action.payload
         }
     }
 })
 
-console.log(HandleSlice.actions)
 export const { setMovies } = HandleSlice.actions
 export default HandleSlice.reducer;
