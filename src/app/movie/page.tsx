@@ -11,7 +11,7 @@ const Movie: React.FC = () => {
 
   const url:
     | string
-    | undefined = `https://netflix54.p.rapidapi.com/search/?query=stranger&offset=0&limit_titles=10&limit_suggestions=20&lang=en`;
+    | undefined = `https://netflix54.p.rapidapi.com/search/?query=stranger&offset=0&limit_titles=50&limit_suggestions=20&lang=en`;
   useEffect(() => {
     apiData();
   }, []);
@@ -19,9 +19,9 @@ const Movie: React.FC = () => {
     const options: any = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "c02fbc68bcmshbcf86db29a2c655p12007cjsn9adea8d51505",
-        "X-RapidAPI-Host": "netflix54.p.rapidapi.com",
-      },
+        'X-RapidAPI-Key': '3440b5d93amsha90f0a3834e15a4p1b6320jsn6ee5ee7c56d1',
+        'X-RapidAPI-Host': 'netflix54.p.rapidapi.com'
+      }
     };
 
     const res = await fetch(url as string, options);

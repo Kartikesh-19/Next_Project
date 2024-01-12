@@ -44,8 +44,6 @@ export default function RootLayout({
   title: string; // Add a title prop
 }) {
   const currentPath = usePathname();
-  console.log('====================>',currentPath)
-
   const pageTitle = getPageTitle(currentPath);
   return (
     <html lang="en" className={mulish.className}>
