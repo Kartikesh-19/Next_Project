@@ -10,6 +10,7 @@ const mulish = Mulish({
 export default function Thread({ messages, sendMessage }:any) {
   const formRef:any = useRef();
   async function formAction(formData:any) {
+    console.log('=======>formData.get("message")',formData.get("message"))
     addOptimisticMessage(formData.get("message"));
     formRef.current.reset();
     await sendMessage(formData);
@@ -33,7 +34,7 @@ export default function Thread({ messages, sendMessage }:any) {
           {!!message.sending && <small> (Sending...)</small>}
         </div>
       ))}
-      <form action={formAction} ref={formRef}>
+      <form action={formAction} ref={formRef} className={styles.contact_form} style={{marginLeft:"35%"}}>
       <div className={styles.input_field}>
         Enter your name
         <label className={styles.label} htmlFor="username">
